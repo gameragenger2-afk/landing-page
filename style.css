@@ -173,6 +173,26 @@ body{
   color:#1a8f3a;
 }
 
+.btn-primary,
+.btn-outline{
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.btn-primary:hover,
+.btn-outline:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+.btn-primary:hover{
+  background:#8f0e12;
+}
+
+.btn-outline:hover{
+  border-color:#0b1c2d;
+}
+
 /* HERO IMAGE */
 .hero-image{
   position:relative;
