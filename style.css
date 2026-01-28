@@ -369,3 +369,7 @@ footer .footer-grid div p{
   line-height:1.6;
 }
 
+.hero-buttons a{
+  text-decoration:none;
+  display:inline-block;
+}
