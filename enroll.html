@@ -1,70 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Complete Your Enrollment</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<title>Complete Your Enrollment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+
+<!-- Government Banner -->
+<div class="gov-banner">
+  🇺🇸 An official website of the United States government
+</div>
+
+<!-- Header -->
+<header class="main-header">
+  <div class="container">
+    <div class="logo">
+      <strong>Federal Digital</strong>
+      <span>Protection Initiative</span>
+    </div>
     <nav>
-      <div class="logo">
-        <img src="logo.png" alt="Federal Digital Protection Initiative">
-      </div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="enroll.html">Contact</a></li>
-        <li><a href="enroll.html">Support</a></li>
-      </ul>
+      <a href="index.html">Services</a>
+      <a href="index.html">About</a>
+      <span class="phone">📞 1-800-SAFE-USA</span>
+      <a href="#" class="btn-primary">Enroll Now</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <section class="enrollment">
-    <div class="order-summary">
-      <h2>Order Summary</h2>
-      <p>Federal Protection Plan - 30-Day Initial Coverage: $1.00</p>
-      <p>Recurring Protection (After 30 Days): $9.90 / month</p>
-      <p>Total Due Today: $1.00</p>
+<!-- Enrollment Section -->
+<section class="enrollment">
+  <div class="container enrollment-grid">
+
+    <!-- Left Column -->
+    <div class="enroll-left">
+      <h1>Complete Your Enrollment</h1>
+      <p class="subtitle">
+        You are one step away from full federal digital protection.  
+        Secure your identity and finances today.
+      </p>
+
+      <div class="summary-card">
+        <h3>Order Summary</h3>
+
+        <div class="row">
+          <div>
+            <strong>Federal Protection Plan</strong>
+            <p>30-Day Initial Coverage</p>
+          </div>
+          <span>$1.00</span>
+        </div>
+
+        <div class="row">
+          <div>
+            <strong>Recurring Protection</strong>
+            <p>After first 30 days</p>
+          </div>
+          <span>$9.90 / mo</span>
+        </div>
+
+        <div class="row total">
+          <strong>Total Due Today</strong>
+          <strong>$1.00</strong>
+        </div>
+      </div>
+
+      <div class="secure-box">
+        🔒 Your payment is processed via a secure, encrypted federal gateway.  
+        We use 256-bit SSL encryption to protect your data.
+      </div>
     </div>
 
-    <div class="payment-form">
-      <h2>Payment Information</h2>
-      <form>
-        <label for="full-name">Full Legal Name</label>
-        <input type="text" id="full-name" name="full-name" required>
+    <!-- Right Column -->
+    <div class="payment-card">
+      <h3>💳 Payment Information</h3>
 
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required>
+      <label>Full Legal Name</label>
+      <input type="text" placeholder="John Doe">
 
-        <label for="card-number">Card Number</label>
-        <input type="text" id="card-number" name="card-number" required>
+      <label>Email Address</label>
+      <input type="email" placeholder="john@example.com">
 
-        <label for="expiry">Expiry (MM/YY)</label>
-        <input type="text" id="expiry" name="expiry" required>
+      <label>Card Number</label>
+      <input type="text" placeholder="0000 0000 0000 0000">
 
-        <label for="cvc">CVC</label>
-        <input type="text" id="cvc" name="cvc" required>
+      <div class="row-inputs">
+        <div>
+          <label>Expiry (MM/YY)</label>
+          <input type="text" placeholder="12/26">
+        </div>
+        <div>
+          <label>CVC</label>
+          <input type="text" placeholder="123">
+        </div>
+      </div>
 
-        <label for="auto-pay">
-          <input type="checkbox" id="auto-pay" name="auto-pay"> Enable Auto-Pay Protection
-        </label>
+      <div class="checkbox">
+        <input type="checkbox" checked>
+        <p>
+          <strong>Enable Auto-Pay Protection</strong><br>
+          Ensure continuous coverage. After your first 30 days for $1.00,
+          your subscription will automatically renew at $9.90 per month.
+          Cancel anytime.
+        </p>
+      </div>
 
-        <button type="submit" class="cta-btn">Pay $1.00 & Enroll</button>
-      </form>
+      <button class="pay-btn">Pay $1.00 & Enroll</button>
+
+      <p class="terms">
+        By clicking above, you agree to the Terms of Service and Privacy Policy
+        of the Federal Digital Protection Initiative.
+      </p>
     </div>
-  </section>
 
-  <footer>
-    <div class="footer-links">
-      <a href="#">Privacy Policy</a> | 
-      <a href="#">Terms of Service</a> | 
-      <a href="#">Accessibility</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid container">
+
+    <div>
+      <h3>Federal Digital Protection Initiative</h3>
+      <p>Bureau of Consumer Financial Protection</p>
+      <p>Cybersecurity & Infrastructure Security Agency</p>
+      <p>Department of Health and Human Services</p>
     </div>
-    <div class="footer-contact">
-      <p>1-800-SAFE-USA | help@federalprotection.gov</p>
+
+    <div>
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="#">Enroll Now</a>
+      <a href="#">Report Fraud</a>
+      <a href="#">Contact Support</a>
     </div>
-  </footer>
+
+    <div>
+      <h3>Contact</h3>
+      <p>📞 1-800-SAFE-USA</p>
+      <p>✉ help@federalprotection.gov</p>
+      <p>📍 Washington, D.C. 20001</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Federal Digital Protection Initiative. All rights reserved.  
+    <span>Privacy Policy · Terms of Service · Accessibility</span>
+  </div>
+</footer>
+
 </body>
 </html>
