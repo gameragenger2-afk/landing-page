@@ -19,18 +19,18 @@ body{
 /* GOVERNMENT STRIP */
 .gov-banner{
   background:#050f1f;
-  color:#ffffff;
+  color:#fff;
   text-align:center;
-  padding:8px;
-  font-size:13px;
-  border-bottom:2px solid #b51217;
+  padding:6px;
+  font-size:12px;
+  border-bottom:1px solid #b51217;
   letter-spacing:.4px;
 }
-
 /* HEADER */
 .main-header{
-  background:#0b1c2d;
-  border-bottom:5px solid #b51217;
+ background:#0b1c2d;
+  border-bottom:4px solid #b51217;
+  box-shadow:0 4px 12px rgba(0,0,0,.4);
 }
 
 .main-header .nav{
@@ -228,13 +228,15 @@ body{
   font-size:36px;
   margin-bottom:12px;
   font-weight:900;
+  color:#000;
 }
 
 .services .subtitle{
-  color:#4b5e75;
-  max-width:680px;
+    color:#6b7280;
+  max-width:720px;
   margin:0 auto;
   font-size:16px;
+  font-weight:400;
 }
 
 .service-grid{
@@ -327,4 +329,37 @@ footer a{
   margin-top:40px;
   border-top:1px solid rgba(255,255,255,.1);
   padding-top:20px;
+}
+
+/* STATUS CARD FIX */
+.status-card{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.status-text{
+  line-height:1.2;
+}
+
+.status-card strong{
+  font-weight:900;
+}
+
+.status-card span{
+  font-size:13px;
+  color:#4c5f77;
+}
+
+/* SERVICE SECTION TYPOGRAPHY */
+.services h2{
+  color:#000;
+  font-weight:900;
+  margin-bottom:6px;
+}
+
+.services .subtitle{
+  color:#6b7280;
+  font-weight:400;
+  margin-top:0;
 }
