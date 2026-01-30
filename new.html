@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Givers Plan | Digital Protection Initiative | Human Support Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
+        
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            background-color: #f0f0f0;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Merriweather', serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .govt-box {
+            border: 3px solid #1a4480;
+            background: white;
+            box-shadow: 4px 4px 0px #1a4480;
+        }
+        
+        .govt-btn {
+            border: 3px solid #1a4480;
+            background: #005ea2;
+            color: white;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 4px 4px 0px #1a4480;
+            transition: all 0.1s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .govt-btn:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px #1a4480;
+            background: #004578;
+        }
+        
+        .govt-btn-secondary {
+            border: 3px solid #1a4480;
+            background: white;
+            color: #1a4480;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 4px 4px 0px #1a4480;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .govt-btn-secondary:hover {
+            background: #f0f0f0;
+        }
+        
+        .text-link {
+            color: #005ea2;
+            text-decoration: underline;
+            font-weight: 700;
+        }
+        
+        .text-link:hover {
+            color: #d83933;
+        }
+        
+        .official-banner {
+            background: #1a4480;
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .alert-box {
+            border-left: 8px solid #d83933;
+            background: #f4e3db;
+            padding: 20px;
+            font-weight: 700;
+        }
+        
+        .seal-placeholder {
+            width: 80px;
+            height: 80px;
+            border: 3px solid #1a4480;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 32px;
+            background: white;
+        }
+        
+        .top-nav {
+            background: #e1e5eb;
+            border-bottom: 2px solid #1a4480;
+            padding: 10px 0;
+        }
+        
+        .top-nav a {
+            color: #1a4480;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 5px 15px;
+            border-right: 2px solid #1a4480;
+        }
+        
+        .top-nav a:hover {
+            color: #d83933;
+            text-decoration: underline;
+        }
+        
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 0;
+            border-top: 4px solid #1a4480;
+        }
+        
+        .sidebar {
+            background: #e1e5eb;
+            border-right: 3px solid #1a4480;
+            padding: 30px 20px;
+        }
+        
+        .sidebar-link {
+            display: block;
+            padding: 10px;
+            margin-bottom: 8px;
+            background: white;
+            border: 2px solid #1a4480;
+            color: #1a4480;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        .sidebar-link:hover {
+            background: #1a4480;
+            color: white;
+        }
+        
+        .main-content {
+            background: white;
+            padding: 40px;
+        }
+        
+        .highlight-box {
+            background: #e1f3f8;
+            border: 3px solid #1a4480;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .warning-box {
+            background: #faf3d1;
+            border: 3px solid #ffbe2e;
+            padding: 20px;
+            margin: 20px 0;
+            font-weight: 700;
+        }
+        
+        .human-box {
+            background: #f4e3db;
+            border: 4px solid #d83933;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 3px solid #1a4480;
+        }
+        
+        th {
+            background: #1a4480;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 900;
+            text-transform: uppercase;
+            border: 2px solid #1a4480;
+        }
+        
+        td {
+            padding: 15px;
+            border: 2px solid #1a4480;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background: #f0f0f0;
+        }
+        
+        .footer-govt {
+            background: #1a4480;
+            color: white;
+            border-top: 8px solid #d83933;
+        }
+        
+        .footer-link {
+            color: white;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+        
+        .footer-link:hover {
+            color: #ffbe2e;
+        }
+        
+        .resource-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .resource-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .resource-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #d83933;
+            font-weight: 900;
+        }
+        
+        @media (max-width: 768px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                border-right: none;
+                border-bottom: 3px solid #1a4480;
+            }
+            .top-nav a {
+                display: block;
+                border-right: none;
+                border-bottom: 1px solid #1a4480;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Service Banner -->
+    <div class="official-banner py-2 px-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl">🛡️</span>
+                <span>Senior Protection Services Since 2024</span>
+            </div>
+            <div class="hidden md:block">
+                <a href="tel:18002277526" class="text-white hover:text-yellow-300 font-bold">1-800-CARE-PLAN</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <div class="max-w-7xl mx-auto px-6 flex flex-wrap">
+            <a href="#overview">Program Overview</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#coverage">Protection Coverage</a>
+            <a href="#testimonials">Member Stories</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact" style="border-right: none;">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white border-b-4 border-[#1a4480]">
+        <div class="max-w-7xl mx-auto px-6 py-6">
+            <div class="flex items-center gap-6">
+                <div class="seal-placeholder">
+                    👤
+                </div>
+                <div>
+                    <div class="text-sm font-bold text-[#d83933] uppercase tracking-widest mb-1">Established 2024</div>
+                    <h1 class="text-4xl md:text-5xl text-[#1a4480] leading-tight">CARE GIVERS PLAN</h1>
+                    <div class="text-xl font-bold text-[#1a4480] mt-1">DIGITAL PROTECTION INITIATIVE</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Emergency Notice -->
+    <div class="bg-[#d83933] text-white py-3 px-6 border-b-4 border-black">
+        <div class="max-w-7xl mx-auto text-center font-bold text-lg tracking-wide">
+            ⚠️ TIRED OF TALKING TO ROBOTS? <a href="tel:18002277526" class="underline hover:text-yellow-300">CALL 1-800-CARE-PLAN</a> FOR A REAL HUMAN IN 30 SECONDS
+        </div>
+    </div>
+
+    <div class="grid-layout max-w-7xl mx-auto bg-white shadow-2xl">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="mb-6">
+                <h3 class="text-[#1a4480] text-lg mb-4 border-b-2 border-[#1a4480] pb-2">QUICK LINKS</h3>
+                <a href="#enroll" class="sidebar-link">→ Enroll Now</a>
+                <a href="tel:18002277526" class="sidebar-link">→ Emergency Hotline</a>
+                <a href="#coverage" class="sidebar-link">→ What We Cover</a>
+                <a href="#device" class="sidebar-link">→ The Device</a>
+                <a href="#family" class="sidebar-link">→ Family Resources</a>
+            </div>
+
+            <div class="bg-white border-3 border-[#1a4480] p-4 mb-6">
+                <h4 class="text-[#d83933] text-lg mb-2">HUMAN HOTLINE</h4>
+                <a href="tel:18002277526" class="text-2xl font-black text-[#1a4480] hover:text-[#d83933] block mb-2">1-800-CARE-PLAN</a>
+                <div class="text-sm font-bold mt-2">24 Hours / 7 Days<br>Real People Only</div>
+            </div>
+
+            <div class="bg-[#1a4480] text-white p-4 border-3 border-black mb-6">
+                <h4 class="font-black text-lg mb-2">OUR PROMISE</h4>
+                <p class="text-sm font-bold">No AI. No chatbots. No "press 1 for billing." Just immediate human connection with trained protection specialists.</p>
+            </div>
+
+            <div class="bg-[#faf3d1] border-3 border-[#ffbe2e] p-4">
+                <h4 class="font-black text-lg mb-2 text-[#1a4480]">
+                    <a href="#ai-threat" class="text-[#1a4480] hover:text-[#d83933]">THE AI THREAT →</a>
+                </h4>
+                <p class="text-sm font-bold">Scammers now use AI voices to sound like your grandchildren. <a href="#learn-ai" class="underline">Learn how to protect yourself</a>.</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Breadcrumb -->
+            <div class="text-sm font-bold text-gray-600 mb-4 uppercase tracking-wide">
+                <a href="#" class="text-link">Home</a> > 
+                <a href="#overview" class="text-link">Digital Protection Initiative</a> > 
+                <span>Enrollment Information</span>
+            </div>
+
+            <h2 id="overview" class="text-3xl text-[#1a4480] mb-6 border-b-4 border-[#d83933] pb-2 inline-block">
+                DIRECT HUMAN PROTECTION SERVICE
+            </h2>
+
+            <div class="human-box">
+                <h3 class="text-2xl text-[#d83933] mb-3">IN THE AGE OF AI AND ROBOTS, WE STILL BELIEVE IN HUMANS</h3>
+                <p class="font-bold text-lg leading-relaxed">
+                    Every time you call, you get a real person. Not an algorithm. Not a voice recognition system. 
+                    Not a chatbot pretending to be human. <a href="#our-people" class="text-link">Meet our specialists</a>.
+                </p>
+            </div>
+
+            <div class="alert-box mb-6">
+                <strong class="text-[#d83933] text-lg uppercase">WHY HUMAN VERIFICATION MATTERS:</strong><br>
+                Artificial Intelligence has made scams more convincing than ever. AI can clone voices, write convincing emails, and fool automated systems. Only a trained human specialist can ask the right questions, hear the fear in your voice, and provide the reassurance that no machine can offer. 
+                <a href="#ai-threat" class="text-link">Read about AI voice cloning threats</a>.
+            </div>
+
+            <div id="how-it-works" class="highlight-box">
+                <h3 class="text-[#1a4480] text-xl mb-3">HOW OUR SERVICE WORKS</h3>
+                <p class="font-bold text-lg leading-relaxed mb-4">
+                    The Care Givers Plan Digital Protection Initiative provides members with immediate telephone access to certified Senior Protection Specialists. When you encounter suspicious calls, emails, or visitors, one button connects you to a human expert who will:
+                </p>
+                <ul class="list-disc pl-6 font-bold space-y-2">
+                    <li>Listen to your concerns with patience and respect</li>
+                    <li>Verify suspicious callers while you wait on the line</li>
+                    <li>Contact your family members to alert them of potential fraud attempts</li>
+                    <li>Stay connected with you until you feel completely safe</li>
+                    <li>Provide clear, jargon-free guidance you can trust</li>
+                </ul>
+                <p class="mt-4">
+                    <a href="#process" class="govt-btn-secondary px-4 py-2 text-sm">View Detailed Process</a>
+                    <a href="#training" class="govt-btn-secondary px-4 py-2 text-sm ml-2">Specialist Training Info</a>
+                </p>
+            </div>
+
+            <h3 id="enroll" class="text-2xl text-[#1a4480] mt-8 mb-4">MEMBERSHIP ENROLLMENT</h3>
+            
+            <table class="mb-8">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Details & Links</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="font-black text-[#1a4480]">MONTHLY MEMBERSHIP</td>
+                        <td class="text-lg">
+                            <strong>$8.50 per month</strong><br>
+                            <span class="text-sm">No contracts. Cancel anytime.</span><br>
+                            <a href="#pricing-faq" class="text-link text-sm">Why we keep costs low</a> | 
+                            <a href="#cancel" class="text-link text-sm">Cancellation policy</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="font-black text-[#1a4480]">RESPONSE TIME</td>
+                        <td>
+                            Under 30 seconds to human answer<br>
+                            <span class="text-red-700 font-bold">NO PHONE TREES OR HOLD MUSIC</span><br>
+                            <a href="#guarantee" class="text-link text-sm">Our answer-time guarantee</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="font-black text-[#1a4480]">SUPPORT DEVICE</td>
+                        <td>
+                            Free large-button emergency phone included<br>
+                            Works with any landline or cell service<br>
+                            <a href="#device" class="text-link text-sm">Device specifications</a> | 
+                            <a href="#setup" class="text-link text-sm">Setup guide</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="font-black text-[#1a4480]">FAMILY NOTIFICATIONS</td>
+                        <td>
+                            Automatic alerts to up to 3 family members when you call for help<br>
+                            <a href="#family" class="text-link text-sm">How family alerts work</a> | 
+                            <a href="#add-family" class="text-link text-sm">Add family members</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="font-black text-[#1a4480]">SPECIALISTS</td>
+                        <td>
+                            Background-checked, trained Senior Protection Specialists<br>
+                            Average 10+ years experience<br>
+                            <a href="#our-people" class="text-link text-sm">Meet the team</a> | 
+                            <a href="#training" class="text-link text-sm">Training program details</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="govt-box p-6 text-center mb-8 bg-[#e1f3f8]">
+                <h3 class="text-3xl text-[#1a4480] mb-2">$8.50 PER MONTH</h3>
+                <p class="text-sm font-bold text-[#d83933] mb-4">LESS THAN 30 CENTS A DAY</p>
+                <p class="font-bold text-lg mb-6">
+                    Secure your membership today through our encrypted payment portal. 
+                    <a href="#security" class="text-link">View security details</a>.
+                </p>
+                
+                <!-- Stripe Payment Link -->
+                <a href="https://buy.stripe.com/your_payment_link_here" class="govt-btn inline-block px-12 py-4 text-xl rounded-none mb-4">
+                    CLICK HERE TO ENROLL NOW
+                </a>
+                
+                <div class="mt-4 space-y-2">
+                    <p class="text-sm font-bold text-[#1a4480]">
+                        🔒 SECURE CHECKOUT VIA STRIPE PAYMENT SYSTEMS
+                    </p>
+                    <p class="text-xs font-bold">
+                        <a href="#privacy" class="text-link">Privacy Protected</a> • 
+                        <a href="#terms" class="text-link">Terms of Service</a> • 
+                        <a href="#refund" class="text-link">30-Day Money Back Guarantee</a>
+                    </p>
+                </div>
+                
+                <div class="mt-4 pt-4 border-t-2 border-[#1a4480]">
+                    <p class="text-sm font-bold">PREFER TO ENROLL BY PHONE?</p>
+                    <a href="tel:18002277526" class="text-xl font-black text-[#d83933] hover:text-[#1a4480] block mt-1">
+                        CALL 1-800-CARE-PLAN
+                    </a>
+                    <p class="text-xs mt-1">Mon-Fri 8AM-8PM ET • Sat-Sun 9AM-5PM ET</p>
+                </div>
+            </div>
+
+            <div id="ai-threat" class="warning-box">
+                <strong>THE AI THREAT:</strong> Scammers now use artificial intelligence to clone the voices of your loved ones and create fake emergency scenarios. 
+                <a href="https://www.ftc.gov/consumer-advice" class="text-link" target="_blank">The FTC reports</a> that AI-powered scams have increased 800% since 2023. 
+                Automated systems cannot detect these sophisticated frauds. 
+                <a href="#ai-protection" class="text-link">Learn how human verification defeats AI scams</a>.
+            </div>
+
+            <h3 id="coverage" class="text-2xl text-[#1a4480] mt-8 mb-4">PROTECTION COVERAGE AREAS</h3>
+            
+            <div class="grid md:grid-cols-2 gap-4 mb-8">
+                <div class="govt-box p-4">
+                    <h4 class="text-[#d83933] mb-2">PHONE SCAM DEFENSE</h4>
+                    <p class="text-sm mb-3">IRS impersonation, Social Security scams, grandparent extortion, and lottery fraud.</p>
+                    <a href="#phone-scams" class="text-link text-sm">Common phone scams we block →</a>
+                </div>
+                
+                <div class="govt-box p-4">
+                    <h4 class="text-[#d83933] mb-2">DIGITAL FRAUD PREVENTION</h4>
+                    <p class="text-sm mb-3">Phishing emails, fake virus pop-ups, unauthorized remote access, crypto schemes.</p>
+                    <a href="#digital-threats" class="text-link text-sm">Current digital threats →</a>
+                </div>
+                
+                <div class="govt-box p-4">
+                    <h4 class="text-[#d83933] mb-2">DOOR-TO-DOOR VERIFICATION</h4>
+                    <p class="text-sm mb-3">Fake contractors, fraudulent utility workers, charity scams, suspicious solicitors.</p>
+                    <a href="#door-scams" class="text-link text-sm">Door-to-door safety guide →</a>
+                </div>
+                
+                <div class="govt-box p-4">
+                    <h4 class="text-[#d83933] mb-2">FINANCIAL TRANSACTION REVIEW</h4>
+                    <p class="text-sm mb-3">Gift card verification, wire transfer confirmation, banking request validation.</p>
+                    <a href="#financial-safety" class="text-link text-sm">Financial protection protocols →</a>
+                </div>
+            </div>
+
+            <div class="bg-[#f0f0f0] border-4 border-[#1a4480] p-6 mt-8 mb-8">
+                <h3 id="resources" class="text-[#1a4480] text-xl mb-4">ADDITIONAL RESOURCES</h3>
+                <ul class="resource-list font-bold">
+                    <li>
+                        <a href="#senior-guide" class="text-link">Senior's Guide to Avoiding AI Voice Scams (PDF Download)</a>
+                    </li>
+                    <li>
+                        <a href="#family-toolkit" class="text-link">Family Caregiver Protection Toolkit</a>
+                    </li>
+                    <li>
+                        <a href="https://consumer.ftc.gov/scams" class="text-link" target="_blank">Federal Trade Commission Scam Information (External Link)</a>
+                    </li>
+                    <li>
+                        <a href="#report-scam" class="text-link">Report a Scam Attempt to Our Database</a>
+                    </li>
+                    <li>
+                        <a href="#newsletter" class="text-link">Subscribe to Monthly Fraud Alert Newsletter</a>
+                    </li>
+                    <li>
+                        <a href="#community" class="text-link">Join Our Senior Protection Community Forum</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="testimonials" class="bg-[#f9f9f9] border-4 border-[#1a4480] p-6 mt-8">
+                <h3 class="text-[#1a4480] text-xl mb-4">MEMBER TESTIMONIALS</h3>
+                
+                <blockquote class="border-l-4 border-[#d83933] pl-4 mb-4 italic">
+                    "I called what I thought was Amazon customer service and got an AI voice that sounded real. I hung up and pressed my Care Givers button. Jennifer answered immediately and confirmed it was a scam. Worth every penny."
+                    <footer class="font-bold not-italic mt-2">
+                        — Harold M., Age 81, Ohio | 
+                        <a href="#story-harold" class="text-link text-sm">Read full story</a>
+                    </footer>
+                </blockquote>
+
+                <blockquote class="border-l-4 border-[#d83933] pl-4 mb-4 italic">
+                    "I was so tired of pressing buttons and talking to robots. When I call Care Givers Plan, a real person answers on the second ring. 
+                    <a href="#ai-voice-scam" class="text-link">They helped me when someone tried to scam me using an AI voice of my grandson</a>."
+                    <footer class="font-bold not-italic mt-2">
+                        — Eleanor T., Age 79, Florida | 
+                        <a href="#story-eleanor" class="text-link text-sm">Read full story</a>
+                    </footer>
+                </blockquote>
+
+                <blockquote class="border-l-4 border-[#d83933] pl-4 italic">
+                    "As my mother's caregiver, I can't be there 24/7. Knowing she can press one button and reach a human specialist who will <a href="#family-alerts" class="text-link">call me immediately</a> gives me peace of mind I can't get from automated systems."
+                    <footer class="font-bold not-italic mt-2">
+                        — Patricia K., Authorized Caregiver, Texas | 
+                        <a href="#caregiver-resources" class="text-link text-sm">Caregiver resources</a>
+                    </footer>
+                </blockquote>
+                
+                <div class="mt-4 text-center">
+                    <a href="#all-stories" class="govt-btn-secondary px-6 py-2 text-sm">View All Member Stories</a>
+                    <a href="#submit-story" class="govt-btn-secondary px-6 py-2 text-sm ml-2">Submit Your Story</a>
+                </div>
+            </div>
+
+            <div id="faq" class="mt-8 p-6 border-4 border-[#1a4480] bg-white">
+                <h3 class="text-2xl text-[#1a4480] mb-4">FREQUENTLY ASKED QUESTIONS</h3>
+                <div class="space-y-4">
+                    <div class="border-b-2 border-gray-300 pb-2">
+                        <a href="#faq-device" class="font-bold text-lg text-link">How does the emergency device work?</a>
+                        <p class="text-sm mt-1">Our large-button device connects to any phone line...</p>
+                    </div>
+                    <div class="border-b-2 border-gray-300 pb-2">
+                        <a href="#faq-cancel" class="font-bold text-lg text-link">How do I cancel my membership?</a>
+                        <p class="text-sm mt-1">You can cancel anytime by calling our hotline or...</p>
+                    </div>
+                    <div class="border-b-2 border-gray-300 pb-2">
+                        <a href="#faq-family" class="font-bold text-lg text-link">Can my children manage my account?</a>
+                        <p class="text-sm mt-1">Yes, you can designate authorized family members...</p>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="#all-faq" class="text-link font-bold">View All Frequently Asked Questions →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact" class="mt-8 p-6 bg-[#1a4480] text-white text-center border-4 border-[#d83933]">
+                <p class="font-bold text-xl mb-2">QUESTIONS? SPEAK TO A HUMAN NOW</p>
+                <a href="tel:18002277526" class="text-3xl font-black hover:text-yellow-300 block mb-2">1-800-CARE-PLAN</a>
+                <p class="text-lg font-bold mb-4">Real People Answer 24/7 • No Automated Systems</p>
+                
+                <div class="border-t border-white pt-4 mt-4">
+                    <p class="text-sm mb-2">OTHER WAYS TO REACH US:</p>
+                    <p class="text-sm">
+                        Email: <a href="mailto:help@caregiversplan.com" class="underline hover:text-yellow-300">help@caregiversplan.com</a> | 
+                        Mail: <a href="#mailing-address" class="underline hover:text-yellow-300">Mailing Address</a> | 
+                        <a href="#live-chat" class="underline hover:text-yellow-300">Live Chat (Human Only)</a>
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-govt py-8 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-6">
+                <div>
+                    <h4 class="font-black text-lg mb-4 uppercase">Care Givers Plan</h4>
+                    <p class="text-sm font-bold mb-2">Digital Protection Initiative</p>
+                    <p class="text-xs">Human-centered fraud prevention services for American seniors.</p>
+                    <p class="mt-2 text-xs">
+                        <a href="#about" class="footer-link">About Our Company</a><br>
+                        <a href="#mission" class="footer-link">Our Mission</a><br>
+                        <a href="#careers" class="footer-link">Careers</a>
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-black text-lg mb-4 uppercase">Member Services</h4>
+                    <ul class="text-sm font-bold space-y-2">
+                        <li><a href="#enroll" class="footer-link">Enroll Now</a></li>
+                        <li><a href="#member-login" class="footer-link">Member Login</a></li>
+                        <li><a href="#account" class="footer-link">Manage Account</a></li>
+                        <li><a href="#billing" class="footer-link">Billing Questions</a></li>
+                        <li><a href="#device-support" class="footer-link">Device Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-lg mb-4 uppercase">Resources</h4>
+                    <ul class="text-sm font-bold space-y-2">
+                        <li><a href="#scam-database" class="footer-link">Scam Alert Database</a></li>
+                        <li><a href="#senior-guide" class="footer-link">Senior Safety Guide</a></li>
+                        <li><a href="#family-resources" class="footer-link">Family Resources</a></li>
+                        <li><a href="#blog" class="footer-link">Protection Blog</a></li>
+                        <li><a href="#newsletter" class="footer-link">Newsletter Signup</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-lg mb-4 uppercase">Legal & Contact</h4>
+                    <ul class="text-sm font-bold space-y-2">
+                        <li><a href="#privacy" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#terms" class="footer-link">Terms of Service</a></li>
+                        <li><a href="#refund" class="footer-link">Refund Policy</a></li>
+                        <li><a href="#accessibility" class="footer-link">Accessibility</a></li>
+                        <li><a href="mailto:legal@caregiversplan.com" class="footer-link">Legal Inquiries</a></li>
+                    </ul>
+                    <p class="mt-4 text-xs">
+                        <a href="tel:18002277526" class="text-xl font-bold hover:text-yellow-300">1-800-CARE-PLAN</a><br>
+                        <a href="mailto:help@caregiversplan.com" class="footer-link">help@caregiversplan.com</a>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-white pt-6 text-center text-sm font-bold">
+                <p>CARE GIVERS PLAN DIGITAL PROTECTION INITIATIVE</p>
+                <p class="mt-2">©️ 2024 Care Givers Plan. All rights reserved.</p>
+                <p class="mt-2 text-xs">
+                    This is a private protection service. Not affiliated with any government agency. | 
+                    <a href="#disclaimer" class="footer-link">Full Disclaimer</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
